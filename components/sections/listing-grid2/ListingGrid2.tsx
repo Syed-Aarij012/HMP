@@ -1,0 +1,72 @@
+"use client";
+
+import ListingResultsPanel from "@/components/common/ListingResultsPanel";
+import ListingSidebarFilterForm, {
+  ListingSidebarClearButton,
+} from "@/components/common/ListingSidebarFilterForm";
+import Pagination from "@/components/common/Pagination";
+import { setCurrentPage } from "@/components/reducer/listingFilterActions";
+import { useListingFilterState } from "@/components/listings/useListingFilterState";
+import SaleAgentListingCard from "@/components/sections/sale-agents-detail/SaleAgentListingCard";
+import { listingListCars } from "@/data/cars";
+
+export default function ListingGrid2() {
+  const { state, dispatch, visibleListings, totalPages } =
+    useListingFilterState({
+      listings: listingListCars,
+      itemPerPage: 50,
+    });
+
+  return (
+    <section className="tf-section listing-detail pd-t0-mb">
+      <div className="container">
+        <div className="listing-grid flex text-start gap-48">
+          <div className="sidebar-right-listing">
+            <div className="sidebar-title flex-two flex-wrap">
+              <h4>Filters and Sort</h4>
+              <ListingSidebarClearButton dispatch={dispatch} />
+            </div>
+            <div className="form-filter-siderbar">
+              <ListingSidebarFilterForm
+                id="filter-form-grid2"
+                state={state}
+                dispatch={dispatch}
+              />
+            </div>
+          </div>
+          <ListingResultsPanel
+            defaultView="grid"
+            gridColumns={3}
+            resultCount={state.sorted.length}
+            filterState={state}
+            filterDispatch={dispatch}
+            footer={
+              <Pagination
+                className="mt-40"
+                totalPages={totalPages}
+                currentPage={state.currentPage}
+                onPageChange={(page) => setCurrentPage(page, dispatch)}
+              />
+            }
+          >
+            {(view) =>
+              visibleListings.length > 0 ? (
+                visibleListings.map((car) => (
+                  <SaleAgentListingCard
+                    key={car.id}
+                    car={car}
+                    layout={view}
+                  />
+                ))
+              ) : (
+                <div className="no-results">
+                  <p>No listings match your filters.</p>
+                </div>
+              )
+            }
+          </ListingResultsPanel>
+        </div>
+      </div>
+    </section>
+  );
+}

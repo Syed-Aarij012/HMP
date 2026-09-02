@@ -1,0 +1,44 @@
+export type DashboardListingStatus = "approved" | "pending" | "sold";
+
+export type Car = {
+  id: number;
+  image: string;
+  title: string;
+  price: number;
+  mileage: number;
+  transmission: string;
+  fuel: string;
+  tag: string;
+  photoCount: number;
+  bodyType?: string[];
+  listingType?: string[];
+  brandType?: string[];
+  priceRange?: string[];
+  description?: string;
+  imageWidth?: number;
+  imageHeight?: number;
+  href?: string;
+  featured?: boolean;
+  filterMake?: string;
+  filterBrand?: string;
+  filterModel?: string;
+  filterModelCategory?: string;
+  filterSeats?: number;
+  filterOwnership?: string;
+  filterBodyType?: string[];
+  filterFuel?: string;
+  filterTransmission?: string;
+  filterDriveType?: string;
+  filterDoors?: number;
+  filterCylinders?: number;
+  filterColor?: string;
+  filterYear?: number;
+  filterFeatures?: string[];
+  mapPosition?: [number, number];
+};
+
+export type DashboardCar = Car & {
+  dashboardImage: string;
+  dashboardStatus: DashboardListingStatus;
+  postingDate: string;
+};
