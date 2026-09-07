@@ -11,7 +11,7 @@ const STAR_PATH =
 function Testimonials() {
   return (
     <>
-      <section className="tf-section3 bg-testimonial overflow-hidden">
+      <section className="tf-section bg-testimonial overflow-hidden">
         <div className="container">
           <div className="image-bg-testimonial">
             <Image

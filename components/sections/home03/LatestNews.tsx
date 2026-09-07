@@ -7,7 +7,7 @@ import {
 function LatestNews() {
   return (
     <>
-      <section className="section-blog tf-section3 position-relative z-1 bg-white">
+      <section className="section-blog tf-section position-relative z-1 bg-white">
         <div className="container">
           <div className="heading-section center mb-50 wow fadeInUp">
             <h2 className="heading-tittle">The Latest News Car</h2>

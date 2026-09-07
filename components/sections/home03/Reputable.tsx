@@ -4,11 +4,14 @@ import Counter from "@/components/common/Counter";
 function Reputable() {
   return (
     <>
-      <section className="tf-section section-reputable bg-black">
+      <section className="tf-section section-reputable home03-reputable-light">
         <div className="container">
           <div className="row">
             <div className="col-lg-5">
-              <div className="reputable-image">
+              <div
+                className="reputable-image"
+                style={{ backgroundColor: "#24272C", borderRadius: 4 }}
+              >
                 <div className="tf-counter center">
                   <div className="number-counter">
                     <div className="number">
@@ -35,8 +38,8 @@ function Reputable() {
                 <div className="image-logo wow fadeInUp">
                   <Image
                     className="lazyload"
-                    data-src="/assets/images/logo/logo-footer@2x.png"
-                    src="/assets/images/logo/logo-footer@2x.png"
+                    data-src="/assets/images/logo/logo.png"
+                    src="/assets/images/logo/logo.png"
                     alt="image"
                     width={329}
                     height={64}
@@ -46,7 +49,7 @@ function Reputable() {
                   className="heading-section wow fadeInUp"
                   data-wow-delay="0.2s"
                 >
-                  <h2 className="heading-tittle text-color-1">
+                  <h2 className="heading-tittle text-color-2">
                     HMP is the largest and most reputable platform for car
                     listings
                   </h2>
@@ -68,7 +71,7 @@ function Reputable() {
                     </div>
                     <span>M</span>
                   </div>
-                  <p className="fs-18 fw-4 text-color-1">
+                  <p className="fs-18 fw-4 text-color-2">
                     people found their dream car
                   </p>
                 </div>

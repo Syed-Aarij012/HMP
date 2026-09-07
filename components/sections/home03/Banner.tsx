@@ -4,7 +4,7 @@ import Image from "next/image";
 function Banner() {
   return (
     <>
-      <section className="tf-section-banner tf-section3">
+      <section className="tf-section-banner tf-section">
         <div className="container">
           <div className="tf-grid-layout md-col-2 gap-48">
             <div className="tf-image-box bg-black flex-one align-end wow fadeInUp">

@@ -17,6 +17,24 @@ body,
 .swiper-navigation-icon {
   display: none !important;
 }
+
+.home03-add-top {
+  padding-top: 102px;
+}
+
+.home03-reputable-light .btn-wrap .sc-button:last-child {
+  border-color: rgba(36, 39, 44, 0.2) !important;
+}
+
+.home03-reputable-light .btn-wrap .sc-button:last-child span,
+.home03-reputable-light .btn-wrap .sc-button:last-child i {
+  color: #24272c !important;
+}
+
+.home03-reputable-light .btn-wrap .sc-button:last-child:hover span,
+.home03-reputable-light .btn-wrap .sc-button:last-child:hover i {
+  color: #ffffff !important;
+}
 .infinite-slider {
   display: flex;
   flex-flow: row;

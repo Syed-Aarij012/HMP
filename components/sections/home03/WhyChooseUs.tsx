@@ -8,7 +8,7 @@ import { Navigation, Pagination } from "swiper/modules";
 function WhyChooseUs() {
   return (
     <>
-      <section className="tf-section3">
+      <section className="tf-section">
         <div className="container">
           <div className="heading-section center mb-50 wow fadeInUp">
             <h2 className="heading-tittle">Why Choose Us</h2>

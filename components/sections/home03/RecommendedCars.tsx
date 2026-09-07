@@ -17,7 +17,7 @@ function RecommendedCars() {
 
   return (
     <>
-      <section className="tf-section3">
+      <section className="tf-section">
         <div className="container">
           <div className="heading-section center mb-30 wow fadeInUp">
             <h2 className="heading-tittle">Recommended Cars For You</h2>

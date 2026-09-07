@@ -41,7 +41,9 @@ export default function Home03Page() {
 
         <WhyChooseUs />
         <Banner />
-        <RecentlyViewedCars />
+        <div className="home03-add-top">
+          <RecentlyViewedCars />
+        </div>
         <Testimonials />
         <LatestNews />
         <OurPartners />
