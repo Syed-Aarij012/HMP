@@ -658,17 +658,17 @@
   }
 
   &.style8 {
-    min-height: calc(100vh - 60px);
-    min-height: calc(100svh - 60px);
+    min-height: 100vh;
+    min-height: 100svh;
 
     .slider-item {
-      min-height: calc(100vh - 60px);
-      min-height: calc(100svh - 60px);
+      min-height: 100vh;
+      min-height: 100svh;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
 
       .content {
-        padding: 24px 20px 200px 20px;
+        padding: 130px 20px 200px 20px;
 
         .heading {
           max-width: 579px;
