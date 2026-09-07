@@ -27,7 +27,7 @@ export default function Home03Page() {
       <>
         <Hero />
         <CarFilter />
-        <FindCar />
+        <SearchByBrand />
         <RecommendedCars />
         <Reputable />
         <CarCounter />
@@ -41,7 +41,7 @@ export default function Home03Page() {
         <WhyChooseUs />
         <Banner />
         <RecentlyViewedCars />
-        <SearchByBrand />
+        <FindCar />
         <Testimonials />
         <LatestNews />
         <OurPartners />
