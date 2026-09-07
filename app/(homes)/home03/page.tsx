@@ -33,7 +33,7 @@ export default function Home03Page() {
         <Reputable />
         <CarCounter />
 
-        <section className="tf-section3">
+        <section style={{ padding: 0 }}>
           <div className="container">
             <div className="line" />
           </div>

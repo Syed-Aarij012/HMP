@@ -3,7 +3,7 @@ import PartnersSlider from "@/components/common/PartnersSlider";
 function OurPartners() {
   return (
     <>
-      <section className="flat-brand tf-section">
+      <section className="flat-brand tf-section" style={{ paddingTop: 40 }}>
         <div className="container">
           <div className="heading-section center mb-50 wow fadeInUp">
             <h2 className="heading-tittle">Our partners</h2>
