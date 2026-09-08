@@ -2174,6 +2174,7 @@ export const allCars: Car[] = [
   ...popularListings,
   ...recommendedCars,
   ...similarCars,
+  ...listingListCars,
   ...home02RecommendedCars,
   ...home02PopularListings,
   ...home03RecommendedCars,
