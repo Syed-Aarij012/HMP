@@ -26,7 +26,7 @@ export default function Header2() {
             {/* Logo Box */}
             <div className="logo-box flex">
               <div className="logo">
-                <Link href={`/home02`}>
+                <Link href={`/`}>
                   <Image
                     className="lazyload img-none"
                     data-src="/assets/images/logo/logo2.png"

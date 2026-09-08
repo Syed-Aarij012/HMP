@@ -1,4 +1,4 @@
-import IndexPage from "./(homes)/home01/page";
+import Home03Page from "./(homes)/home03/page";
 import { Metadata } from "next";
 // metadata
 export const metadata: Metadata = {
@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-      <IndexPage />
+      <Home03Page />
     </>
   );
 }

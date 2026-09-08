@@ -4,13 +4,7 @@ export const mainNavMenu: NavMenuItem[] = [
   {
     id: "home",
     label: "Home",
-    children: [
-      { id: "home-01", label: "Home Page 01", href: "/" },
-      { id: "home-02", label: "Home Page 02", href: "/home02" },
-      { id: "home-03", label: "Home Page 03", href: "/home03" },
-      { id: "home-04", label: "Home Page 04", href: "/home04" },
-      { id: "home-05", label: "Home Page 05", href: "/home05" },
-    ],
+    href: "/",
   },
   {
     id: "listing-car",
