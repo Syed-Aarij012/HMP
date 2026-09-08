@@ -28,6 +28,7 @@ export default function Home03Page() {
         <Hero />
         <CarFilter />
         <SearchByBrand />
+        <Banner />
         <FindCar />
         <RecommendedCars />
         <Reputable />
@@ -40,7 +41,6 @@ export default function Home03Page() {
         </section>
 
         <WhyChooseUs />
-        <Banner />
         <div className="home03-add-top">
           <RecentlyViewedCars />
         </div>
