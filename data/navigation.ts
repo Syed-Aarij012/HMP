@@ -22,18 +22,6 @@ export const mainNavMenu: NavMenuItem[] = [
         label: "Listing",
         children: [
           { id: "listing-list", label: "Listing list", href: "/listing-list" },
-          { id: "listing-grid", label: "Listing grid V1", href: "/listing-grid" },
-          { id: "listing-grid2", label: "Listing grid V2", href: "/listing-grid2" },
-          {
-            id: "listing-grid-map",
-            label: "Listing map V1",
-            href: "/listing-grid-map",
-          },
-          {
-            id: "listing-list-map",
-            label: "Listing map V2",
-            href: "/listing-list-map",
-          },
         ],
       },
       {
@@ -44,31 +32,6 @@ export const mainNavMenu: NavMenuItem[] = [
             id: "listing-detail-v1",
             label: "Listing detail V1",
             href: "/listing-detail-v1/1",
-          },
-          {
-            id: "listing-detail-v2",
-            label: "Listing detail V2",
-            href: "/listing-detail-v2/1",
-          },
-          {
-            id: "listing-detail-v3",
-            label: "Listing detail V3",
-            href: "/listing-detail-v3/1",
-          },
-          {
-            id: "listing-detail-v4",
-            label: "Listing detail V4",
-            href: "/listing-detail-v4/1",
-          },
-          {
-            id: "listing-detail-v5",
-            label: "Listing detail V5",
-            href: "/listing-detail-v5/1",
-          },
-          {
-            id: "listing-detail-v6",
-            label: "Listing detail V6",
-            href: "/listing-detail-v6/1",
           },
         ],
       },
