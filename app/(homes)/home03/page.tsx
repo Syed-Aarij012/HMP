@@ -6,7 +6,7 @@ import CarFilter from "@/components/sections/home03/CarFilter";
 import FindCar from "@/components/sections/home04/FindCars";
 import RecommendedCars from "@/components/sections/home03/RecommendedCars";
 import PopularListings from "@/components/sections/index/PopularListings";
-import CarCounter from "@/components/sections/home03/CarCounter";
+import LoanCalculator from "@/components/sections/index/LoanCalculator";
 import WhyChooseUs from "@/components/sections/home03/WhyChooseUs";
 import Banner from "@/components/sections/home03/Banner";
 import RecentlyViewedCars from "@/components/sections/home04/TrendingCars";
@@ -32,7 +32,7 @@ export default function Home03Page() {
         <FindCar />
         <RecommendedCars />
         <PopularListings />
-        <CarCounter />
+        <LoanCalculator />
 
         <section style={{ padding: 0 }}>
           <div className="container">
