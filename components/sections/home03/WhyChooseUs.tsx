@@ -54,9 +54,13 @@ function WhyChooseUs() {
               },
             }}
           >
-            {home03WhyChooseUsFeatures.map((feature) => (
+            {home03WhyChooseUsFeatures.map((feature, index) => (
               <SwiperSlide className="swiper-slide" key={feature.id}>
-                <div className="tf-icon-box style-1">
+                <div
+                  className={`tf-icon-box style-1 home03-wcu-card${
+                    index % 2 === 1 ? " home03-wcu-card-blue" : ""
+                  }`}
+                >
                   <div className="icon">
                     <WhyChooseUsIcon icon={feature.icon} />
                   </div>
