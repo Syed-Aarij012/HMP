@@ -2,7 +2,7 @@ import Counter from "@/components/common/Counter";
 function CarCounter() {
   return (
     <>
-      <section className="tf-section">
+      <section className="tf-section" style={{ paddingTop: 40 }}>
         <div className="container">
           <div className="grid-counter-4">
             <div className="tf-counter style-1 center wow fadeInUp">
