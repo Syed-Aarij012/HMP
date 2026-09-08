@@ -10,7 +10,7 @@ function Banner() {
       >
         <div className="container">
           <div className="tf-grid-layout md-col-2 gap-48">
-            <div className="tf-image-box bg-black flex-one align-end wow fadeInUp">
+            <div className="tf-image-box home03-banner-card flex-one align-end wow fadeInUp">
               <div className="content">
                 <h3 className="title">Are you looking to buy a car?</h3>
                 <p className="sub">
@@ -34,7 +34,7 @@ function Banner() {
               </div>
             </div>
             <div
-              className="tf-image-box bg-primary flex-one align-end wow fadeInUp"
+              className="tf-image-box home03-banner-card home03-banner-card-blue flex-one align-end wow fadeInUp"
               data-wow-delay="0.2s"
             >
               <div className="content">
