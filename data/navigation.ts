@@ -41,11 +41,7 @@ export const mainNavMenu: NavMenuItem[] = [
   {
     id: "blog",
     label: "Blog",
-    children: [
-      { id: "blog-list", label: "Blog List", href: "/blog" },
-      { id: "blog-grid", label: "Blog Grid", href: "/blog-grid" },
-      { id: "blog-detail", label: "Blog Detail", href: "/blog-detail/1" },
-    ],
+    href: "/blog-grid",
   },
   {
     id: "contact",
