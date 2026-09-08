@@ -15,27 +15,7 @@ export const mainNavMenu: NavMenuItem[] = [
   {
     id: "listing-car",
     label: "Listing Car",
-    className: "tfcl-mega-menu",
-    children: [
-      {
-        id: "listing",
-        label: "Listing",
-        children: [
-          { id: "listing-list", label: "Listing list", href: "/listing-list" },
-        ],
-      },
-      {
-        id: "listing-detail",
-        label: "Listing detail",
-        children: [
-          {
-            id: "listing-detail-v1",
-            label: "Listing detail V1",
-            href: "/listing-detail-v1/1",
-          },
-        ],
-      },
-    ],
+    href: "/listing-list",
   },
   {
     id: "page",
