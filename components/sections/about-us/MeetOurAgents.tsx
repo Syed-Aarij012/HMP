@@ -41,7 +41,7 @@ function MeetOurAgents() {
               {home05Agents.map((agent) => (
                 <SwiperSlide key={agent.id}>
                   <div className="agent-item ">
-                    <Link href={`/sale-agents-detail`} className="image">
+                    <Link href={`/sale-agents-detail/${agent.id}`} className="image">
                       <Image
                         className="lazyload"
                         data-src={agent.image}
@@ -53,7 +53,7 @@ function MeetOurAgents() {
                     </Link>
                     <div className="content center">
                       <div className="fs-18 fw-6 title text-color-2">
-                        <Link href={`/sale-agents-detail`}>{agent.name}</Link>
+                        <Link href={`/sale-agents-detail/${agent.id}`}>{agent.name}</Link>
                       </div>
                       <p className="sub-title fs-12 fw-4">{agent.role}</p>
                     </div>

@@ -3,9 +3,14 @@ import Link from "next/link";
 import MobileDealerSidebarShell from "@/components/common/MobileDealerSidebarShell";
 import SaleAgentListingsPanel from "@/components/sections/sale-agents-detail/SaleAgentListingsPanel";
 import { getDealerById } from "@/data/dealers";
+import type { Agent } from "@/types/agents";
 
-function SaleAgentsDetail() {
-  const dealer = getDealerById(1)!;
+type SaleAgentsDetailProps = {
+  agent: Agent;
+};
+
+function SaleAgentsDetail({ agent }: SaleAgentsDetailProps) {
+  const dealer = getDealerById(agent.dealerId ?? 1)!;
 
   return (
     <>
@@ -20,17 +25,17 @@ function SaleAgentsDetail() {
             >
               <div className="widget-title-siderbar widget">
                 <Image
-                  src="/assets/images/agent/agent-sidebar.jpg"
-                  alt="image"
+                  src={agent.image}
+                  alt={agent.name}
                   className="avata-agent"
                   width={582}
                   height={570}
                 />
                 <div className="flex-two gap-20 ">
-                  <h2 className="title">Arlene McCoy</h2>
+                  <h2 className="title">{agent.name}</h2>
                   <div className="reating flex-three">
                     <i className="icon-carus-star" />
-                    <span>5/5</span>
+                    <span>{(agent.rating ?? 5).toFixed(1)}/5</span>
                   </div>
                 </div>
                 <ul className="icon-list flex-three flex-wrap">
@@ -70,19 +75,17 @@ function SaleAgentsDetail() {
                   </li>
                 </ul>
                 <p className="des">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                  bibendum orci quis rhoncus sagittis. Suspendisse quis nibh
-                  arcu. Nunc cursus leo ac nunc sollicitudin iaculis ac in
-                  mauris. Vivamus eget dolor risus semper ac fermentum sit amet.
+                  {agent.bio ??
+                    "Focused on matching every buyer with the right car, fast and fair pricing every time."}
                 </p>
                 <ul className="contact-agent">
                   <li className="flex-three">
                     <i className="icon-carus-phone" />
-                    (209) 555-0104
+                    {agent.phone}
                   </li>
                   <li className="flex-three">
                     <i className="icon-carus-envelopesimple" />
-                    arlenemccoy@gmail.com
+                    {agent.email}
                   </li>
                 </ul>
                 <div className="social-listing">
@@ -172,8 +175,7 @@ function SaleAgentsDetail() {
                     data-map-scroll="true"
                   />
                   <div className="address-dealer flex-three">
-                    <i className="icon-carus-map" /> 4517 Washington Ave.
-                    Manchester, Kentucky 39495
+                    <i className="icon-carus-map" /> {dealer.address}
                   </div>
                 </div>
               </div>

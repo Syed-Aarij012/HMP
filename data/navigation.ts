@@ -33,14 +33,7 @@ export const mainNavMenu: NavMenuItem[] = [
       {
         id: "agents",
         label: "Agents",
-        children: [
-          { id: "sale-agents", label: "Sale agents", href: "/sale-agents" },
-          {
-            id: "sale-agents-detail",
-            label: "Sale agents detail",
-            href: "/sale-agents-detail",
-          },
-        ],
+        href: "/sale-agents",
       },
       { id: "dashboard", label: "Dashboard", href: "/dashboard" },
     ],

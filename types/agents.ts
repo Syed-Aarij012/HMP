@@ -5,4 +5,8 @@ export type Agent = {
   role: string;
   phone: string;
   email: string;
+  rating?: number;
+  bio?: string;
+  address?: string;
+  dealerId?: number;
 };
