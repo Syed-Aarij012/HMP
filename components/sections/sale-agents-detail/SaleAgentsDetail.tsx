@@ -2,8 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import MobileDealerSidebarShell from "@/components/common/MobileDealerSidebarShell";
 import SaleAgentListingsPanel from "@/components/sections/sale-agents-detail/SaleAgentListingsPanel";
+import { getDealerById } from "@/data/dealers";
 
 function SaleAgentsDetail() {
+  const dealer = getDealerById(1)!;
+
   return (
     <>
       <section className="tf-section3 listing-detail">
@@ -118,17 +121,22 @@ function SaleAgentsDetail() {
               <div className="widget-dealer-contact widget">
                 <h3>Get in touch with the dealer</h3>
                 <div className="infor flex-three gap-20">
-                  <Link href="/dealer-detail" className="image d-block">
+                  <Link
+                    href={`/dealer-detail/${dealer.id}`}
+                    className="image d-block"
+                  >
                     <Image
-                      src="/assets/images/section/avata-inf.png"
-                      alt="image"
+                      src={dealer.logo}
+                      alt={dealer.name}
                       width={90}
                       height={90}
                     />
                   </Link>
                   <div className="content">
                     <h4>
-                      <Link href="/dealer-detail">Car by Themesflat</Link>
+                      <Link href={`/dealer-detail/${dealer.id}`}>
+                        {dealer.name}
+                      </Link>
                     </h4>
                     <div className="verified flex-three">
                       <i className="icon-carus-shieldcheck" />
@@ -137,13 +145,22 @@ function SaleAgentsDetail() {
                   </div>
                 </div>
                 <div className="button-contact">
-                  <Link href="/dealer-detail" className="button-form-1">
+                  <Link
+                    href={`/dealer-detail/${dealer.id}`}
+                    className="button-form-1"
+                  >
                     Contact dealer
                   </Link>
-                  <Link href="/dealer-detail" className="button-form-2">
+                  <Link
+                    href={`/dealer-detail/${dealer.id}`}
+                    className="button-form-2"
+                  >
                     Chat via Whatsapp
                   </Link>
-                  <Link href="/dealer-detail" className="button-form-3">
+                  <Link
+                    href={`/dealer-detail/${dealer.id}`}
+                    className="button-form-3"
+                  >
                     Send mesage
                   </Link>
                 </div>

@@ -6,8 +6,13 @@ import MobileDealerSidebarShell from "@/components/common/MobileDealerSidebarShe
 import DealerSaleAgentSlider from "@/components/sections/dealer-detail/DealerSaleAgentSlider";
 import DealerInventorySlider from "@/components/sections/dealer-detail/DealerInventorySlider";
 import { dealerInventoryCars } from "@/data/cars";
+import type { Dealer } from "@/types/dealers";
 
-function DealerDetail() {
+type DealerDetailProps = {
+  dealer: Dealer;
+};
+
+function DealerDetail({ dealer }: DealerDetailProps) {
   return (
     <>
       <section className="tf-section3 listing-detail overflow-hidden">
@@ -15,7 +20,7 @@ function DealerDetail() {
           <div className="row">
             <div className="col-lg-8 col-md-12">
               <div className="dealer-content-wrap">
-                <h2 className="title mb-3">About Car by Themesflat</h2>
+                <h2 className="title mb-3">About {dealer.name}</h2>
                 <p className="mb-2">
                   Stay informed about emerging trends in the housing market,
                   such as the demand for sustainable homes, technological
@@ -33,8 +38,8 @@ function DealerDetail() {
                 </p>
                 <div className="features-thumb mb-4">
                   <Image
-                    src="/assets/images/dashboard/single-dealer.webp"
-                    alt="images"
+                    src={dealer.image}
+                    alt={dealer.name}
                     width={1416}
                     height={701}
                   />
@@ -61,9 +66,9 @@ function DealerDetail() {
                   </div>
                   <DealerInventorySlider />
                 </div>
-                <h2 className="mb-8">Car by Themesflat servicing</h2>
+                <h2 className="mb-8">{dealer.name} servicing</h2>
                 <p className="mb-3 fs-14">
-                  Check out what Car by Themesflat serves their customers
+                  Check out what {dealer.name} serves their customers
                 </p>
                 <div className="widget-book-apoint">
                   <h3>Book an appointment</h3>
@@ -85,11 +90,14 @@ function DealerDetail() {
                     <div className="icon-star">
                       <i className="icon-carus-star" />
                     </div>
-                    <div className="numbers font-2">4.9</div>
+                    <div className="numbers font-2">{dealer.rating}</div>
                     <div className="content">
                       <p className="text-color-2">Overall Rating</p>
                       <p className="text-color-2">
-                        Base on <span className="fw-6">372 Reviews</span>
+                        Base on{" "}
+                        <span className="fw-6">
+                          {dealer.reviewCount.toLocaleString()} Reviews
+                        </span>
                       </p>
                     </div>
                   </div>
@@ -98,7 +106,10 @@ function DealerDetail() {
                       <div className="content-inner tab-content">
                         <div className="wrap-review  pd-0">
                           <div className="titles">
-                            <h4>372 Rating and Reviews</h4>
+                            <h4>
+                              {dealer.reviewCount.toLocaleString()} Rating and
+                              Reviews
+                            </h4>
                           </div>
                           <div className="comment-list">
                             <ol className="mb-30">
@@ -286,7 +297,7 @@ function DealerDetail() {
               closeAriaLabel="Close dealer sidebar"
             >
               <div className="widget-title-siderbar widget">
-                <h2 className="title">Car by Themesflat</h2>
+                <h2 className="title">{dealer.name}</h2>
                 <ul className="icon-list flex-three flex-wrap">
                   <li className="flex-three">
                     <svg
@@ -346,14 +357,14 @@ function DealerDetail() {
                 <div className="infor flex-three gap-20">
                   <div className="image">
                     <Image
-                      src="/assets/images/section/avata-inf.png"
-                      alt="image"
+                      src={dealer.logo}
+                      alt={dealer.name}
                       width={90}
                       height={90}
                     />
                   </div>
                   <div className="content">
-                    <h4>Car by Themesflat</h4>
+                    <h4>{dealer.name}</h4>
                     <div className="verified flex-three">
                       <i className="icon-carus-shieldcheck" />
                       Verified dealer
@@ -383,8 +394,7 @@ function DealerDetail() {
                     data-map-scroll="true"
                   />
                   <div className="address-dealer flex-three">
-                    <i className="icon-carus-map" /> 4517 Washington Ave.
-                    Manchester, Kentucky 39495
+                    <i className="icon-carus-map" /> {dealer.address}
                   </div>
                 </div>
               </div>

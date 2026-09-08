@@ -28,19 +28,7 @@ export const mainNavMenu: NavMenuItem[] = [
       {
         id: "dealer",
         label: "Dealer",
-        children: [
-          {
-            id: "dealer-listing",
-            label: "Dealer listing V1",
-            href: "/dealer-listing",
-          },
-          {
-            id: "dealer-listing2",
-            label: "Dealer listing V2",
-            href: "/dealer-listing2",
-          },
-          { id: "dealer-detail", label: "Dealer detail", href: "/dealer-detail" },
-        ],
+        href: "/dealer-listing2",
       },
       {
         id: "agents",

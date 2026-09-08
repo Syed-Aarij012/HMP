@@ -1,12 +1,17 @@
 import Link from "next/link";
+import type { Dealer } from "@/types/dealers";
 
-function Hero() {
+type HeroProps = {
+  dealer: Dealer;
+};
+
+function Hero({ dealer }: HeroProps) {
   return (
     <>
       <section className="flat-title style1 mb-78 bg-3">
         <div className="container">
           <div className="title-inner">
-            <h1 className="mb-12 font-2">Dealer detail</h1>
+            <h1 className="mb-12 font-2">{dealer.name}</h1>
             <div className="title-group fs-14">
               <Link className="home text-color-3 fw-7" href={`/`}>
                 Home

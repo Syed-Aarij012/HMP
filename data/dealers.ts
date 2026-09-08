@@ -2,7 +2,7 @@ import type { Dealer } from "@/types/dealers";
 
 const DEALER_NAMES = [
   "Autodeal Select",
-  "Car by Themesflat",
+  "Downtown Auto Group",
   "Premium Motors",
   "Elite Auto Group",
   "City Drive Center",
@@ -96,3 +96,11 @@ export const dealers: Dealer[] = Array.from({ length: 16 }, (_, index) => {
 
 export const dealerStates = [...new Set(dealers.map((dealer) => dealer.state))].sort();
 export const dealerBrands = [...new Set(dealers.map((dealer) => dealer.brand))].sort();
+
+export function getDealerById(id: number): Dealer | undefined {
+  return dealers.find((dealer) => dealer.id === id);
+}
+
+export function getDealerDetailTitle(id: number): string {
+  return getDealerById(id)?.name ?? "Dealer Detail";
+}
