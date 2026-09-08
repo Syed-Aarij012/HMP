@@ -5,7 +5,7 @@ import Hero from "@/components/sections/home03/Hero";
 import CarFilter from "@/components/sections/home03/CarFilter";
 import FindCar from "@/components/sections/home04/FindCars";
 import RecommendedCars from "@/components/sections/home03/RecommendedCars";
-import Reputable from "@/components/sections/home03/Reputable";
+import PopularListings from "@/components/sections/index/PopularListings";
 import CarCounter from "@/components/sections/home03/CarCounter";
 import WhyChooseUs from "@/components/sections/home03/WhyChooseUs";
 import Banner from "@/components/sections/home03/Banner";
@@ -31,7 +31,7 @@ export default function Home03Page() {
         <Banner />
         <FindCar />
         <RecommendedCars />
-        <Reputable />
+        <PopularListings />
         <CarCounter />
 
         <section style={{ padding: 0 }}>
